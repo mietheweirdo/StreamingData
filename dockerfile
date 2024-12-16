@@ -1,14 +1,14 @@
 FROM flink:1.20.0
-COPY /flink-connector-jdbc-3.2.0-1.19.jar /opt/flink/lib/
-COPY /flink-connector-kafka-3.4.0-1.20.jar /opt/flink/lib/
-COPY /postgresql-42.7.4.jar /opt/flink/lib/
-COPY /flink-sql-connector-kafka-3.3.0-1.20.jar /opt/flink/lib/
+COPY dependencies/flink-connector-jdbc-3.2.0-1.19.jar /opt/flink/lib/
+COPY dependencies/flink-connector-kafka-3.4.0-1.20.jar /opt/flink/lib/
+COPY dependencies/postgresql-42.7.4.jar /opt/flink/lib/
+COPY dependencies/flink-sql-connector-kafka-3.3.0-1.20.jar /opt/flink/lib/
 
-COPY /flink-json-1.20.0.jar /opt/flink/lib/
-COPY /flink-python-1.20.0.jar /opt/flink/lib/
-COPY /flink-python-1.20.0.jar /opt/flink/opt/
-COPY /kafka-clients-3.4.0.jar /opt/flink/lib/
-COPY /flink-sql-connector-postgres-cdc-3.1.0.jar /opt/flink/lib/
+COPY dependencies/flink-json-1.20.0.jar /opt/flink/lib/
+COPY dependencies/flink-python-1.20.0.jar /opt/flink/lib/
+COPY dependencies/flink-python-1.20.0.jar /opt/flink/opt/
+COPY dependencies/kafka-clients-3.4.0.jar /opt/flink/lib/
+COPY dependencies/flink-sql-connector-postgres-cdc-3.1.0.jar /opt/flink/lib/
 
 RUN set -ex; \
   apt-get update; \
